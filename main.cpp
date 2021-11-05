@@ -69,6 +69,10 @@ typedef struct Rucksack
 } Rucksack;
 
 std::vector<int> Rucksack::capacities = {65, 85};
+//
+//std::vector<int> Rucksack::capacities = {100, 150};
+//
+//std::vector<int> Rucksack::capacities = {103, 156};
 
 typedef struct Unit
 {
