@@ -1,19 +1,19 @@
-#ifndef _GENETIC_ALGORITHM_HPP
-#define _GENETIC_ALGORITHM_HPP
+#ifndef GENETIC_ALGORITHM_HPP
+#define GENETIC_ALGORITHM_HPP
 
 #include "Generation.hpp"
 
 class GeneticAlgorithm
 {
 private:
-    Generation generation;
-    
-    const count_t generation_size;
-    const count_t generation_size_limit;
+    Generation gen;
+    Generation create_generation(int size);
+    void draw_unit(Unit* uni);
 
 public:
-    GeneticAlgorithm(const count_t size, const count_t size_limit);
-    
+    std::vector<Item> items_list;
+    std::vector<int> rucksacks_capacities;
+    Results run(int generation_size, int count_to_del, int count_to_mute, int sel_id, int cross_id, int mut_id);
 };
 
-#endif /* _GENETIC_ALGORITHM_HPP_ */
+#endif //GENETIC_ALGORITHM_HPP
